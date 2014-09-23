@@ -79,6 +79,8 @@ repositories {
 dependencies {
     compile "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
     compile "org.springframework.boot:spring-boot-starter-actuator:$springBootVersion"
+    compile "org.springframework.boot:spring-boot-starter-data-rest:$springBootVersion"
+    compile "org.springframework.boot:spring-boot-starter-data-jpa:$springBootVersion"
     compile "org.springframework:spring-context-support:$springVersion"
     compile "org.codehaus.groovy:groovy-all:$groovyVersion:indy"
     compile 'com.fasterxml.jackson.core:jackson-databind:2.4.2'
@@ -98,6 +100,7 @@ dependencies {
     // microservices
     compile 'com.ofg:micro-infra-spring:0.3.0'
 
+    runtime 'com.h2database:h2:1.4.181'
     runtime "cglib:cglib-nodep:3.1"
     runtime "org.objenesis:objenesis:2.1" // allows mocking of classes without default constructor (together with CGLIB)
     runtime 'org.aspectj:aspectjweaver:1.8.2'
