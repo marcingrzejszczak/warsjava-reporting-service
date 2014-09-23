@@ -1,10 +1,10 @@
-package pl.warsjawa.marketing.repository
+package pl.warsjawa.reporting.repository
 
 import org.springframework.data.repository.PagingAndSortingRepository
 import org.springframework.data.repository.query.Param
 import org.springframework.data.rest.core.annotation.RepositoryRestResource
 import org.springframework.data.rest.core.annotation.RestResource
-import pl.warsjawa.marketing.domain.LoanApplication
+import pl.warsjawa.reporting.domain.LoanApplication
 
 @RepositoryRestResource(collectionResourceRel = "loans", path = "loans")
 interface LoanApplicationRepository extends  PagingAndSortingRepository<LoanApplication, String> {

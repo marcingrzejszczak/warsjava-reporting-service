@@ -1,4 +1,4 @@
-package pl.warsjawa.marketing
+package pl.warsjawa.reporting
 
 import com.wordnik.swagger.annotations.Api
 import com.wordnik.swagger.annotations.ApiOperation

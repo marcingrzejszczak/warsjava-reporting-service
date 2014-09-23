@@ -1,4 +1,4 @@
-package pl.warsjawa.marketing;
+package pl.warsjawa.reporting;
 
 public class ReportingApi {
     public static final String API_URL = "/api" ;

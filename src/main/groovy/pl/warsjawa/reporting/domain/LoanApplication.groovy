@@ -1,4 +1,4 @@
-package pl.warsjawa.marketing.domain
+package pl.warsjawa.reporting.domain
 
 import javax.persistence.Entity
 import javax.persistence.Id

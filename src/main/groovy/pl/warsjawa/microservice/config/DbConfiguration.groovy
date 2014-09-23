@@ -16,7 +16,7 @@ import javax.sql.DataSource
 
 @Configuration
 @CompileStatic
-@EnableJpaRepositories('pl.warsjawa.marketing')
+@EnableJpaRepositories('pl.warsjawa.reporting')
 @Import(RepositoryRestMvcConfiguration.class)
 class DbConfiguration {
 
