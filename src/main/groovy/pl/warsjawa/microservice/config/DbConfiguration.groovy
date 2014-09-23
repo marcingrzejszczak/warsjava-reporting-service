@@ -36,7 +36,7 @@ class DbConfiguration {
 
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setJpaVendorAdapter(vendorAdapter);
-        factory.setPackagesToScan('pl.warsjawa.marketing.domain');
+        factory.setPackagesToScan('pl.warsjawa.reporting.domain');
         factory.setDataSource(dataSource());
 
         return factory;

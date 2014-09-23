@@ -1,0 +1,32 @@
+<alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">
+    <span ng-bind-html="alert.msg"></span>
+</alert>
+
+<div>
+    <h3>Reporting data</h3>
+
+    <p class="lead">
+
+    <form role="form">
+        <div class="form-group">
+            <table class="table">
+                <thead>
+                    <td>#</td>
+                    <td>Loan id</td>
+                    <td>First name</td>
+                    <td>Last name</td>
+                </thead>
+                <tr data-ng-repeat="person in persons._embedded.persons | orderBy:'loanId'">
+                    <td>{{ $index }}</td>
+                    <td>{{ person.loanId }}</td>
+                    <td>{{ person.firstName }}</td>
+                    <td>{{ person.lastName }}</td>
+                </tr>
+            </table>
+        </div>
+        <button type="button" class="btn btn-default" ng-click="getPersons()">Refresh</button>
+    </form>
+
+    <hr/>
+
+</div>
