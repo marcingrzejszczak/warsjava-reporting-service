@@ -10,12 +10,9 @@ class LoanApplication {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id
+    String id
 
-    private String loanId
-    private String job
-    private int amount
-    private String fraudStatus
-    private String decision
+    String loanId, job, fraudStatus, decision
+    int amount
 
 }

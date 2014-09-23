@@ -10,10 +10,8 @@ class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id
+    String id
 
-    private String loanId
-    private String firstName
-    private String lastName
+    String loanId, firstName, lastName
 
 }
