@@ -31,8 +31,8 @@ class ReportingController {
             notes = "This will asynchronously stores loan application data")
     Callable<String> reportAllLoans() {
         return {
-            def query = entityManager.createQuery("""SELECT NEW pl.warsjawa.reporting.domain.LoanData(p.loanId, p.firstName, p.lastName, l.fraudStatus, l.decision, l.amount)
-                                                        FROM Person as p, LoanApplication as l WHERE p.loanId = l.loanId""")
+            def query = entityManager.createQuery("""SELECT NEW pl.warsjawa.reporting.domain.LoanData(c.loanId, c.firstName, c.lastName, l.fraudStatus, l.decision, l.amount)
+                                                        FROM Client as c, LoanApplication as l WHERE c.loanId = l.loanId""")
             List resultList = query.getResultList()
             def json = JsonOutput.toJson(resultList)
 
