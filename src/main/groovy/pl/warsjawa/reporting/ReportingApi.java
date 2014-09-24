@@ -9,5 +9,4 @@ public class ReportingApi {
 
     public static final String API_VERSION_1 = APPLICATION + "/" + APP_JSON_V1;
     public static final String REPORTING_APPLICATION_ROOT_URL = "reporting";
-    public static final String REPORTING_APPLICATION_URL = REPORTING_APPLICATION_ROOT_URL + "/{loanApplicationId}";
 }
