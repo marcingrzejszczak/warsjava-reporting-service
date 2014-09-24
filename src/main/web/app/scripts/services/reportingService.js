@@ -1,11 +1,11 @@
 'use strict';
 
 angular.module('BootstrapApplication.services')
-    .factory('PersonService', ['$http', function($http) {
-        var personService = {};
-        personService.getPersons = function (successFn) {
+    .factory('ReportingService', ['$http', function($http) {
+        var reportingService = {};
+        reportingService.getReportingData = function (successFn) {
             $http({
-                url: '/persons',
+                url: '/api/reporting',
                 dataType: 'json',
                 method: 'GET',
                 headers: {
@@ -16,6 +16,6 @@ angular.module('BootstrapApplication.services')
             });
         };
 
-        return personService;
+        return reportingService;
     }
 ]);

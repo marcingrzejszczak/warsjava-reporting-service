@@ -15,16 +15,22 @@
                     <td>Loan id</td>
                     <td>First name</td>
                     <td>Last name</td>
+                    <td>Amount</td>
+                    <td>Fraud status</td>
+                    <td>Decision taken</td>
                 </thead>
-                <tr data-ng-repeat="person in persons._embedded.persons | orderBy:'loanId'">
+                <tr data-ng-repeat="entry in reportingData | orderBy:'loanId'">
                     <td>{{ $index }}</td>
-                    <td>{{ person.loanId }}</td>
-                    <td>{{ person.firstName }}</td>
-                    <td>{{ person.lastName }}</td>
+                    <td>{{ entry.loanId }}</td>
+                    <td>{{ entry.firstName }}</td>
+                    <td>{{ entry.lastName }}</td>
+                    <td>{{ entry.amount }}</td>
+                    <td>{{ entry.fraudStatus }}</td>
+                    <td>{{ entry.decision }}</td>
                 </tr>
             </table>
         </div>
-        <button type="button" class="btn btn-default" ng-click="getPersons()">Refresh</button>
+        <button type="button" class="btn btn-default" ng-click="getReportingData()">Refresh</button>
     </form>
 
     <hr/>
